@@ -24,16 +24,16 @@ public class PlayerMouseControl : MonoBehaviour
     void Update()
     {
         float distToTarget = Vector3.Distance(transform.position, targetPosition);
-        if(distToTarget < 1f)
+        if(distToTarget > 1f)
         {
-            Vector3 targetDirection = Vector3.Normalize(transform.position - targetPosition);
+            Vector3 targetDirection = Vector3.Normalize( targetPosition - transform.position);
             characterController.Move(targetDirection * moveSpeed * Time.deltaTime);
-            transform.LookAt(targetDirection);
-            animator.SetBool("running", true);
+            transform.LookAt(targetPosition);
+            animator.SetBool("Running", true);
         }
         else
         {
-            animator.SetBool("running", false);
+            animator.SetBool("Running", false);
         }
         if (Input.GetMouseButtonDown(0))
         {
