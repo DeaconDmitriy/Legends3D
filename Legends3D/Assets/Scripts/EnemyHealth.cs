@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int startingHealth = 30;
+    [SerializeField] private Collider weapon;
+
     private int _currentHealth;
     private Animator _animator;
     // Start is called before the first frame update
@@ -12,6 +14,12 @@ public class EnemyHealth : MonoBehaviour
     {
         _currentHealth = startingHealth;
         _animator = GetComponent<Animator>();
+        DisableWeapons();
+    }
+
+    public bool isDead()
+    { 
+    return _currentHealth <= 0;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,6 +30,14 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    public void EnableWeapons()
+    {
+       weapon.enabled = true;
+    }
+    public void DisableWeapons()
+    {
+        weapon.enabled = false;
+    }
     public void TakeDamage(int damage)
 
     {

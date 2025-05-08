@@ -12,6 +12,7 @@ public class PlayerMouseControl : MonoBehaviour
     private Vector3 targetPosition;
     private Animator animator;
 
+   
     // Start is called before the first frame update
     void Start()
     {

@@ -6,8 +6,10 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int startingHealth = 100;
     [SerializeField] private float timeBetweenHits = 1f;
+    [SerializeField] private Collider[] weapons;
 
     private int _currentHealth;
+    private int _currentMaxHealth;
     private float lastHitTime = 0;
     private Animator animator;
 
@@ -25,6 +27,16 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void EnableWapons()
+    {
+        foreach (Collider weapon in weapons)
+            weapon.enabled = true;
+    }
+    public void DisableWapons()
+    {
+        foreach (Collider weapon in weapons)
+            weapon.enabled = false;
+    }
     private void OnTriggerStay(Collider other)
     {
         if (other.tag.Equals("EnemyWeapon") && isAlive && Time.time - lastHitTime > timeBetweenHits)
@@ -51,7 +63,14 @@ public class PlayerHealth : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         _currentHealth = startingHealth;
+        _currentMaxHealth = startingHealth;
         isAlive = true;
+        DisableWapons();
+    }
+
+    public float GetHealthRatio()
+    {
+        return (float)_currentHealth / (float)_currentMaxHealth;
     }
 
     void Update()
