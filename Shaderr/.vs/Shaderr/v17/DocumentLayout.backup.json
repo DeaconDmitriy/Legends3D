@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\revan\\Documents\\GitHub\\Legends3D\\Shaderr\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4871129D-1C6A-6F97-323D-9CC892479122}|Assembly-CSharp.csproj|c:\\users\\revan\\documents\\github\\legends3d\\shaderr\\assets\\shaders\\eshader.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{4871129D-1C6A-6F97-323D-9CC892479122}|Assembly-CSharp.csproj|solutionrelative:assets\\shaders\\eshader.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EShader.shader",
+              "DocumentMoniker": "C:\\Users\\revan\\Documents\\GitHub\\Legends3D\\Shaderr\\Assets\\Shaders\\EShader.shader",
+              "RelativeDocumentMoniker": "Assets\\Shaders\\EShader.shader",
+              "ToolTip": "C:\\Users\\revan\\Documents\\GitHub\\Legends3D\\Shaderr\\Assets\\Shaders\\EShader.shader",
+              "RelativeToolTip": "Assets\\Shaders\\EShader.shader",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-05-15T07:55:36.694Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
